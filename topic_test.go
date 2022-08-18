@@ -13,7 +13,7 @@ import (
 	"time"
 
 	"github.com/libp2p/go-libp2p-core/peer"
-	pb "github.com/libp2p/go-libp2p-pubsub/pb"
+	pb "github.com/FlavScheidt/go-libp2p-pubsub/pb"
 	tnet "github.com/libp2p/go-libp2p-testing/net"
 )
 

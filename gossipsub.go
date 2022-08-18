@@ -7,7 +7,7 @@ import (
 	"sort"
 	"time"
 
-	pb "github.com/libp2p/go-libp2p-pubsub/pb"
+	pb "github.com/FlavScheidt/go-libp2p-pubsub/pb"
 
 	"github.com/libp2p/go-libp2p-core/host"
 	"github.com/libp2p/go-libp2p-core/network"
@@ -30,20 +30,20 @@ const (
 
 // Defines the default gossipsub parameters.
 var (
-	GossipSubD                                = 6
-	GossipSubDlo                              = 5
+	GossipSubD                                = 8
+	GossipSubDlo                              = 6
 	GossipSubDhi                              = 12
 	GossipSubDscore                           = 4
 	GossipSubDout                             = 2
 	GossipSubHistoryLength                    = 5
 	GossipSubHistoryGossip                    = 3
-	GossipSubDlazy                            = 6
+	GossipSubDlazy                            = 8
 	GossipSubGossipFactor                     = 0.25
 	GossipSubGossipRetransmission             = 3
 	GossipSubHeartbeatInitialDelay            = 100 * time.Millisecond
-	GossipSubHeartbeatInterval                = 1 * time.Second
+	GossipSubHeartbeatInterval                = 3 * time.Second
 	GossipSubFanoutTTL                        = 60 * time.Second
-	GossipSubPrunePeers                       = 16
+	GossipSubPrunePeers                       = 8
 	GossipSubPruneBackoff                     = time.Minute
 	GossipSubUnsubscribeBackoff               = 10 * time.Second
 	GossipSubConnectors                       = 8
@@ -178,7 +178,7 @@ type GossipSubParams struct {
 	// OpportunisticGraftTicks is the number of heartbeat ticks for attempting to improve the mesh
 	// with opportunistic grafting. Every OpportunisticGraftTicks we will attempt to select some
 	// high-scoring mesh peers to replace lower-scoring ones, if the median score of our mesh peers falls
-	// below a threshold (see https://godoc.org/github.com/libp2p/go-libp2p-pubsub#PeerScoreThresholds).
+	// below a threshold (see https://godoc.org/github.com/FlavScheidt/go-libp2p-pubsub#PeerScoreThresholds).
 	OpportunisticGraftTicks uint64
 
 	// OpportunisticGraftPeers is the number of peers to opportunistically graft.

@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/libp2p/go-libp2p-core/crypto"
-	pb "github.com/libp2p/go-libp2p-pubsub/pb"
+	pb "github.com/FlavScheidt/go-libp2p-pubsub/pb"
 
 	"github.com/libp2p/go-libp2p-core/peer"
 )
